@@ -1,3 +1,5 @@
+require 'net/http'
+
 class MobileOfferService
 
   ENDPOINT = "http://api.sponsorpay.com/feed/v1/offers.json"
