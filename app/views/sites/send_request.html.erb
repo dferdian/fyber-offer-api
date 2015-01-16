@@ -1,0 +1,36 @@
+<%= render 'shared/header_page' %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <% code = parse_json_content(@content_response, "code") %>
+    <% if code.include?('ERROR') %>
+      <div class="row warning-text">
+        <%= parse_json_content(@content_response, "message") %>
+      </div>
+    <% end %>
+
+    <% if ["OK","NO_CONTENT"].include?(code) && @signature_response == @generated_response_hashkey %>
+      <% offers = parse_json_content(@content_response, "offers") %>
+      <% if offers.empty? %>
+        <div class='no_offers'>
+          No offers
+        </div>
+      <% else %>
+        <% offers.each do |offer| %>
+          <div class='offer'>
+            <div class='title'><%= offer["title"] %></div>
+            <div class='payout'><%= offer["payout"] %></div>
+            <div class='thumbnail'><%= image_tag offer["thumbnail"]["lowres"] %></div>
+          </div>
+          <hr/>
+        <% end %>
+      <% end %>
+    <% elsif code == "OK" && @signature_response != @generated_response_hashkey  %>
+      <div class="row warning-text">
+        <p>Server response seems to be invalid, its not returning correct signature, please try again</p>
+      </div>
+    <% end %>
+
+    <p class="back-button"><%= link_to "Back", root_path %></p>
+  </div>
+</div>

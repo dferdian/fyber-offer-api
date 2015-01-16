@@ -1,0 +1,11 @@
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+Transfer-Encoding: chunked
+Status: 400 Bad Request
+X-Runtime: 0.000459
+Date: Fri, 16 Jan 2015 01:13:28 GMT
+X-Rack-Cache: miss
+X-Powered-By: Phusion Passenger 4.0.53
+Server: nginx + Phusion Passenger 4.0.53
+
+{"code":"ERROR_INVALID_TIMESTAMP","message":"An invalid or expired timestamp was given as a parameter in the request."}

@@ -1,0 +1,11 @@
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+Transfer-Encoding: chunked
+Status: 400 Bad Request
+X-Runtime: 0.000634
+Date: Thu, 15 Jan 2015 16:42:00 GMT
+X-Rack-Cache: miss
+X-Powered-By: Phusion Passenger 4.0.53
+Server: nginx + Phusion Passenger 4.0.53
+
+{"code":"ERROR_INVALID_UID","message":"An invalid user id (uid) was given as a parameter in the request."}

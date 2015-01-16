@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Status: 200 OK
+P3P: CP="NON DSP COR CURa IVAa IVDa CONa OUR NOR STA"
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+X-Sponsorpay-Response-Signature: 68a825bbfa23a920f7f49ac3ce582de38251bbfc
+X-Sponsorpay-Response-Code: NO_CONTENT
+X-UA-Compatible: IE=Edge,chrome=1
+ETag: "0b711f8c5581cb697808a53cfeb53593"
+X-Runtime: 0.101772
+Date: Thu, 15 Jan 2015 16:40:43 GMT
+X-Rack-Cache: miss
+X-Powered-By: Phusion Passenger 4.0.53
+Server: nginx + Phusion Passenger 4.0.53
+
+{"code":"NO_CONTENT","message":"Successful request, but no offers are currently available for this user.","count":0,"pages":0,"information":{"app_name":"Demo iframe for publisher - do not touch","appid":157,"virtual_currency":"Coins","country":"DE","language":"DE","support_url":"http://api.sponsorpay.com/support?appid=157&feed=on&mobile=on&uid=player1"},"offers":[]}

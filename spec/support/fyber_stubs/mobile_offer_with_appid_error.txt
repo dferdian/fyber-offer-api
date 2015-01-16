@@ -1,0 +1,11 @@
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+Transfer-Encoding: chunked
+Status: 400 Bad Request
+X-Runtime: 0.000467
+Date: Thu, 15 Jan 2015 16:45:13 GMT
+X-Rack-Cache: miss
+X-Powered-By: Phusion Passenger 4.0.53
+Server: nginx + Phusion Passenger 4.0.53
+
+{"code":"ERROR_INVALID_APPID","message":"An invalid application id (appid) was given as a parameter in the request."}

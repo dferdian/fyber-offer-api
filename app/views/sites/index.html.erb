@@ -1,0 +1,35 @@
+<%= render 'shared/header_page' %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_tag send_api_request_path, class: 'form-horizontal' do %>
+      <div class="form-group">
+        <label for="uid" class="col-sm-2 control-label">uid *</label>
+        <div class="col-sm-10">
+          <%= text_field_tag 'uid', '', placeholder: 'player1', class: 'form-control', required: true %>
+          <small class="help-text">The unique User ID, as used internally in your application.</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pub0" class="col-sm-2 control-label">pub0</label>
+        <div class="col-sm-10">
+          <%= text_field_tag 'pub0', '', placeholder: 'campaign2', class: 'form-control' %>
+          <small class="help-text">Custom parameters.</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="page" class="col-sm-2 control-label">page</label>
+        <div class="col-sm-10">
+          <%= text_field_tag 'page', '', placeholder: '1', class: 'form-control' %>
+          <small class="help-text">The page of the response set that you are requesting.</small>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= button_tag "Send", class: 'btn btn-default pull-right' , data: { disable_with: "Requesting API ..." } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
